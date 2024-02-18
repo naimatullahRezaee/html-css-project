@@ -85,10 +85,51 @@ img {
 	padding: 1rem 2rem;
 	border: 1px solid transparent;
 	font-weight: 500;
+	transition: var(--transition);
 }
 
 .btn:hover {
 	background: transparent;
 	color: var(--color-white);
 	border-color: var(--color-white);
+}
+
+.btn-primary {
+	background: var(--color-danger);
+	color: var(--color-white);
+}
+
+/* ================== Navbar =================== */
+
+nav {
+	background: red;
+	width: 100vw;
+	height: 5rem;
+	position: fixed;
+	top: 0;
+	z-index: 11;
+}
+
+.nav__container {
+	height: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+nav button {
+	display: none;
+}
+
+.nav__menu {
+	display: flex;
+	align-items: center;
+	gap: 4rem;
+}
+
+.nav__menu a {
+	font-size: 0.9rem;
+}
+
+.nav__menu a:hover {
+	color: var(--color-bg2);
 }
