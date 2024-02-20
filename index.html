@@ -5,6 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>HTML-CSS-JS</title>
 		<link rel="stylesheet" href="./css/styles.css" />
+
+		<!-- Icons Links -->
 		<link
 			rel="stylesheet"
 			href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
@@ -14,6 +16,12 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
+		/>
+
+		<!-- swiper js -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
 	</head>
 	<body>
@@ -317,16 +325,16 @@
 		</section>
 		<!-- ===================== End of Frequently Asked Questions  ====================== -->
 
-		<section class="container testmonials__container">
+		<section class="container testmonials__container mySwiper">
 			<h2>Student's Testmonials</h2>
-			<div>
-				<article class="testmonial">
+			<div class="swiper-wrapper">
+				<article class="testmonial swiper-slide">
 					<div class="avatar">
 						<img src="./images/avatar2.jpg" alt="" />
 					</div>
 					<div class="testmonial__info">
 						<h5>Ali karimi</h5>
-						<small>Students</small>
+						<small>Student</small>
 					</div>
 					<div class="testmonial__body">
 						<p>
@@ -337,7 +345,7 @@
 						</p>
 					</div>
 				</article>
-				<article class="testmonial">
+				<article class="testmonial swiper-slide">
 					<div class="avatar">
 						<img src="./images/avatar1.jpg" alt="" />
 					</div>
@@ -354,7 +362,7 @@
 						</p>
 					</div>
 				</article>
-				<article class="testmonial">
+				<article class="testmonial swiper-slide">
 					<div class="avatar">
 						<img src="./images/avatar3.jpg" alt="" />
 					</div>
@@ -371,7 +379,7 @@
 						</p>
 					</div>
 				</article>
-				<article class="testmonial">
+				<article class="testmonial swiper-slide">
 					<div class="avatar">
 						<img src="./images/avatar4.jpg" alt="" />
 					</div>
@@ -388,7 +396,7 @@
 						</p>
 					</div>
 				</article>
-				<article class="testmonial">
+				<article class="testmonial swiper-slide">
 					<div class="avatar">
 						<img src="./images/avatar5.jpg" alt="" />
 					</div>
@@ -405,10 +413,28 @@
 						</p>
 					</div>
 				</article>
-				s
 			</div>
+			<div class="swiper-pagination"></div>
 		</section>
 
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="main.js"></script>
+
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+				slidesPerView: 1,
+				spaceBetween: 30,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				// when window width is >=600
+				breakpoints: {
+					600: {
+						slidesPerView: 2,
+					},
+				},
+			});
+		</script>
 	</body>
 </html>
