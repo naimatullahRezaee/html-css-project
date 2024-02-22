@@ -437,6 +437,7 @@ footer ul li a:hover {
 		height: fit-content;
 		flex-direction: column;
 		gap: 0;
+		display: none;
 	}
 	.nav__menu li {
 		width: 100%;
