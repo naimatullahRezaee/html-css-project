@@ -36,8 +36,10 @@ openBtn.addEventListener("click", () => {
 	openBtn.style.display = "none";
 });
 
-closeBtn.addEventListener("click", () => {
+const closeNav = () => {
 	menu.style.display = "none";
 	closeBtn.style.display = "none";
 	openBtn.style.display = "inline-block";
-});
+};
+
+closeBtn.addEventListener("click", closeNav);
