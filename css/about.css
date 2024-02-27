@@ -70,6 +70,7 @@
 	border-radius: 1rem;
 	transition: var(--transition);
 	position: relative;
+	overflow: hidden;
 }
 
 .team__member:hover {
@@ -104,7 +105,13 @@
 	background: var(--color-primary);
 	border-radius: 1rem 0 0 1rem;
 	box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+	transition: var(--transition);
 }
+
+.team__member:hover .team__member-socials {
+	right: 0;
+}
+
 .team__member-socials a {
 	padding: 1rem;
 }
